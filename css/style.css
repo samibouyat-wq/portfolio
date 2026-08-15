@@ -385,7 +385,28 @@ ul { list-style: none; margin: 0; padding: 0; }
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .client-badge:hover { border-color: var(--accent); transform: translateY(-3px); }
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 100px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
 .client-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1.15rem;
