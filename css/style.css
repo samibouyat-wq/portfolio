@@ -217,6 +217,16 @@ ul { list-style: none; margin: 0; padding: 0; }
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 90%);
 }
+.code-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/code-bg.svg');
+  background-repeat: repeat;
+  background-size: 460px 460px;
+  opacity: 0.22;
+  mask-image: radial-gradient(ellipse 55% 85% at 88% 45%, black 0%, black 25%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 55% 85% at 88% 45%, black 0%, black 25%, transparent 72%);
+}
 .hero-inner { position: relative; z-index: 1; max-width: 780px; }
 .hero-eyebrow {
   display: inline-flex;
@@ -567,18 +577,17 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* ============ Education ============ */
 .edu-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 .edu-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px 36px;
+  padding: 28px;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 440px;
 }
 .edu-card::before {
   content: "";
@@ -644,6 +653,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-cards { grid-template-columns: repeat(2, 1fr); }
+  .edu-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -662,6 +672,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   }
   .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
   .contact-cards { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
   .section { padding: 76px 0; }
   .hero { padding-top: 120px; }
   .tl-head { flex-direction: column; }

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="680" viewBox="0 0 680 680">
+  <g font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="13" fill="#8fc7e8" fill-opacity="0.5">
+    <text x="10"  y="30">public class UserService {</text>
+    <text x="30"  y="50">@Autowired</text>
+    <text x="30"  y="70">private UserRepository repo;</text>
+    <text x="30"  y="100">public List&lt;User&gt; findAll() {</text>
+    <text x="50"  y="120">return repo.findAllActive();</text>
+    <text x="30"  y="140">}</text>
+    <text x="10"  y="160">}</text>
+
+    <text x="360" y="60">@Component({</text>
+    <text x="380" y="80">selector: 'app-dashboard',</text>
+    <text x="380" y="100">standalone: true</text>
+    <text x="360" y="120">})</text>
+    <text x="360" y="140">export class DashboardComponent {</text>
+    <text x="380" y="160">constructor(private http: HttpClient) {}</text>
+    <text x="360" y="180">}</text>
+
+    <text x="20"  y="230">SELECT * FROM incidents</text>
+    <text x="20"  y="250">WHERE status = 'OPEN';</text>
+
+    <text x="360" y="250">try {</text>
+    <text x="380" y="270">service.process(payload);</text>
+    <text x="360" y="290">} catch (Exception e) {</text>
+    <text x="380" y="310">log.error(e.getMessage());</text>
+    <text x="360" y="330">}</text>
+
+    <text x="30"  y="360">@RestController</text>
+    <text x="30"  y="380">@RequestMapping("/api/v1")</text>
+    <text x="30"  y="400">public class IncidentController {</text>
+    <text x="50"  y="420">@PostMapping</text>
+    <text x="50"  y="440">ResponseEntity&lt;Void&gt; create(...)</text>
+    <text x="30"  y="460">}</text>
+
+    <text x="370" y="400">describe('AuthService', () =&gt; {</text>
+    <text x="390" y="420">it('should login user', () =&gt; {</text>
+    <text x="410" y="440">expect(result).toBeTruthy();</text>
+    <text x="390" y="460">});</text>
+    <text x="370" y="480">});</text>
+
+    <text x="20"  y="500">git commit -m "fix: race condition"</text>
+    <text x="20"  y="520">kubectl rollout status deploy/api</text>
+
+    <text x="360" y="530">FROM eclipse-temurin:21-jre</text>
+    <text x="360" y="550">EXPOSE 8080</text>
+    <text x="360" y="570">ENTRYPOINT ["java","-jar","app.jar"]</text>
+
+    <text x="30"  y="600">interface Repository&lt;T&gt; {</text>
+    <text x="50"  y="620">save(entity: T): Observable&lt;T&gt;;</text>
+    <text x="30"  y="640">}</text>
+
+    <text x="380" y="640">assertThat(response.status)</text>
+    <text x="400" y="660">.isEqualTo(200);</text>
+  </g>
+</svg>
