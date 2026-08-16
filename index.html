@@ -56,6 +56,16 @@
   <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="8.5" cy="8" r="3"/><path d="M2.5 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.3"/><path d="M14.7 14.3A5 5 0 0 1 21.5 20"/>
   </symbol>
+  <symbol id="flag-fr" viewBox="0 0 3 2">
+    <rect width="1" height="2" x="0" fill="#0055A4"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#EF4135"/>
+  </symbol>
+  <symbol id="flag-gb" viewBox="0 0 60 30">
+    <rect width="60" height="30" fill="#00247d"/>
+    <path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" stroke-width="6"/>
+    <path d="M0 0 L60 30 M60 0 L0 30" stroke="#cf142b" stroke-width="2"/>
+    <path d="M30 0 V30 M0 15 H60" stroke="#fff" stroke-width="10"/>
+    <path d="M30 0 V30 M0 15 H60" stroke="#cf142b" stroke-width="6"/>
+  </symbol>
 </svg>
 
 <div class="code-bg-global" aria-hidden="true"></div>
@@ -65,13 +75,17 @@
   <div class="nav-inner">
     <a href="#top" class="nav-logo">SB<span class="dot">.</span></a>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">À propos</a>
-      <a href="#experience">Expérience</a>
-      <a href="#skills">Compétences</a>
-      <a href="#education">Formation</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-en="About">À propos</a>
+      <a href="#experience" data-en="Experience">Expérience</a>
+      <a href="#skills" data-en="Skills">Compétences</a>
+      <a href="#education" data-en="Education">Formation</a>
+      <a href="#contact" data-en="Contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-ghost nav-cta">Me contacter</a>
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button class="lang-btn active" data-lang="fr" aria-pressed="true"><svg class="flag"><use href="#flag-fr"/></svg> FR</button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false"><svg class="flag"><use href="#flag-gb"/></svg> EN</button>
+    </div>
+    <a href="#contact" class="btn btn-ghost nav-cta" data-en="Contact me">Me contacter</a>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -89,21 +103,21 @@
       <div class="grid-lines"></div>
     </div>
     <div class="container hero-inner">
-      <p class="hero-eyebrow reveal">
+      <p class="hero-eyebrow reveal" data-en="Open to new challenges">
         <span class="status-dot"></span> Disponible pour de nouveaux challenges
       </p>
       <h1 class="hero-title reveal">
         Sami <span class="text-gradient">Bouyat</span>
       </h1>
       <h2 class="hero-role reveal">Tech Lead <span class="slash">/</span> Java &amp; Angular</h2>
-      <p class="hero-text reveal">
+      <p class="hero-text reveal" data-en="8 years of expertise in &lt;strong&gt;Java&lt;/strong&gt; &amp; &lt;strong&gt;Angular&lt;/strong&gt; development, leading strategic projects for major clients such as the &lt;strong&gt;CNAV&lt;/strong&gt; (French pension fund) and the &lt;strong&gt;Ministry of Justice&lt;/strong&gt;. Focused on quality, craftsmanship, and Agile methodologies.">
         8 ans d'expertise en développement <strong>Java</strong> &amp; <strong>Angular</strong>, j'ai piloté des
         projets stratégiques pour des clients majeurs tels que la <strong>CNAV</strong> et le
         <strong>Ministère de la Justice</strong>. Orienté qualité, craftsmanship et méthodologies Agiles.
       </p>
       <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
-        <a href="https://linkedin.com/in/sami-bouyat" target="_blank" rel="noopener" class="btn btn-outline">Voir LinkedIn</a>
+        <a href="#contact" class="btn btn-primary" data-en="Let's talk about your project">Discutons de votre projet</a>
+        <a href="https://linkedin.com/in/sami-bouyat" target="_blank" rel="noopener" class="btn btn-outline" data-en="View LinkedIn">Voir LinkedIn</a>
       </div>
       <div class="hero-meta reveal">
         <span><svg class="icon"><use href="#i-pin"/></svg> Paris</span>
@@ -117,32 +131,32 @@
   <!-- STATS STRIP -->
   <section class="stats-strip reveal">
     <div class="container stats-grid">
-      <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Ans d'expérience</span></div>
-      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Projets majeurs</span></div>
-      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Grands comptes accompagnés</span></div>
-      <div class="stat"><span class="stat-num">Master</span><span class="stat-label">IMIS — Université d'Orléans</span></div>
+      <div class="stat"><span class="stat-num">8+</span><span class="stat-label" data-en="Years of experience">Ans d'expérience</span></div>
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label" data-en="Major projects">Projets majeurs</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-en="Enterprise clients">Grands comptes accompagnés</span></div>
+      <div class="stat"><span class="stat-num">Master</span><span class="stat-label" data-en="IMIS — University of Orléans">IMIS — Université d'Orléans</span></div>
     </div>
   </section>
 
   <!-- CLIENTS -->
   <section class="clients-strip reveal">
     <div class="container">
-      <p class="clients-label">Ils m'ont fait confiance</p>
+      <p class="clients-label" data-en="Trusted by">Ils m'ont fait confiance</p>
       <div class="clients-grid">
         <div class="client-badge">
           <span class="client-logo"><img src="assets/logos/ministere-justice.png" alt="Ministère de la Justice" loading="lazy"></span>
-          <span class="client-name">Ministère de la Justice</span>
+          <span class="client-name" data-en="French Ministry of Justice">Ministère de la Justice</span>
         </div>
         <div class="client-badge">
           <span class="client-logo"><img src="assets/logos/cnav.png" alt="CNAV" loading="lazy"></span>
-          <span class="client-name">Caisse Nationale d'Assurance Vieillesse</span>
+          <span class="client-name" data-en="National Pension Insurance Fund">Caisse Nationale d'Assurance Vieillesse</span>
         </div>
         <div class="client-badge">
           <span class="client-logo"><img src="assets/logos/ministere-interieur.png" alt="Ministère de l'Intérieur" loading="lazy"></span>
-          <span class="client-name">Ministère de l'Intérieur</span>
+          <span class="client-name" data-en="French Ministry of the Interior">Ministère de l'Intérieur</span>
         </div>
         <div class="client-badge">
-          <span class="client-mark">SG</span>
+          <span class="client-logo"><img src="assets/logos/societe-generale.png" alt="Société Générale" loading="lazy"></span>
           <span class="client-name">Société Générale</span>
         </div>
         <div class="client-badge">
@@ -156,10 +170,10 @@
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <p class="section-kicker reveal">01 — À propos</p>
-      <h2 class="section-title reveal">Un Tech Lead orienté qualité &amp; impact</h2>
+      <p class="section-kicker reveal" data-en="01 — About">01 — À propos</p>
+      <h2 class="section-title reveal" data-en="A quality &amp; impact-driven Tech Lead">Un Tech Lead orienté qualité &amp; impact</h2>
       <div class="about-grid">
-        <p class="about-text reveal">
+        <p class="about-text reveal" data-en="Passionate about software development, I design robust and innovative solutions while always keeping an eye on code quality and best practices: &lt;strong&gt;Clean Architecture&lt;/strong&gt;, &lt;strong&gt;TDD&lt;/strong&gt;, &lt;strong&gt;SOLID&lt;/strong&gt; and &lt;strong&gt;Design Patterns&lt;/strong&gt;. A firm believer in Agile methodologies (Scrum, SAFe), I enjoy designing architecture as much as rallying a team around ambitious technical goals.&lt;br&gt;&lt;br&gt;Throughout my missions for &lt;strong&gt;CNAV&lt;/strong&gt;, the &lt;strong&gt;Ministry of Justice&lt;/strong&gt;, the &lt;strong&gt;Ministry of the Interior&lt;/strong&gt; and the &lt;strong&gt;Ministry of Health&lt;/strong&gt;, I have developed dual expertise: designing robust back-end architectures in &lt;strong&gt;Java / Spring Boot&lt;/strong&gt; and modern interfaces in &lt;strong&gt;Angular&lt;/strong&gt;, all industrialized with Docker, Kubernetes/OpenShift and full CI/CD pipelines.">
           Passionné par le développement logiciel, je conçois des solutions robustes et innovantes en gardant
           toujours un œil sur la qualité du code et les bonnes pratiques : <strong>Clean Architecture</strong>,
           <strong>TDD</strong>, <strong>SOLID</strong> et <strong>Design Patterns</strong>. Adepte des méthodologies
@@ -174,15 +188,15 @@
         </p>
         <div class="about-side reveal">
           <div class="info-card">
-            <h3>Langues</h3>
+            <h3 data-en="Languages">Langues</h3>
             <ul class="lang-list">
-              <li><span>Français</span><span class="lang-bar"><i style="width:100%"></i></span></li>
-              <li><span>Anglais</span><span class="lang-bar"><i style="width:75%"></i></span></li>
-              <li><span>Espagnol</span><span class="lang-bar"><i style="width:55%"></i></span></li>
+              <li><span data-en="French">Français</span><span class="lang-bar"><i style="width:100%"></i></span></li>
+              <li><span data-en="English">Anglais</span><span class="lang-bar"><i style="width:75%"></i></span></li>
+              <li><span data-en="Spanish">Espagnol</span><span class="lang-bar"><i style="width:55%"></i></span></li>
             </ul>
           </div>
           <div class="info-card">
-            <h3>Réseaux</h3>
+            <h3 data-en="Connect">Réseaux</h3>
             <ul class="social-list">
               <li><a href="https://linkedin.com/in/sami-bouyat" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg> in/sami-bouyat</a></li>
               <li><a href="https://twitter.com/samiBouyat" target="_blank" rel="noopener"><svg class="icon"><use href="#i-x"/></svg> @samiBouyat</a></li>
@@ -197,8 +211,8 @@
   <!-- EXPERIENCE -->
   <section class="section section-alt" id="experience">
     <div class="container">
-      <p class="section-kicker reveal">02 — Parcours</p>
-      <h2 class="section-title reveal">Expériences professionnelles</h2>
+      <p class="section-kicker reveal" data-en="02 — Experience">02 — Parcours</p>
+      <h2 class="section-title reveal" data-en="Professional Experience">Expériences professionnelles</h2>
 
       <div class="timeline">
 
@@ -207,21 +221,21 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Senior Développeur FullStack</h3>
+                <h3 data-en="Senior Fullstack Developer">Senior Développeur FullStack</h3>
                 <p class="tl-company">Ministère de la Justice, Paris</p>
               </div>
-              <span class="tl-date">Jan. 2026 — Juil. 2026 · 6 mois</span>
+              <span class="tl-date" data-en="Jan 2026 – Jul 2026 · 6 months">Jan. 2026 — Juil. 2026 · 6 mois</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="INCIDEO project — the incident reporting tool for the French Prison Administration Directorate: tracking incidents in both open and closed custody settings, maintaining a historical record, and harmonizing professional practices.">
               Projet <strong>INCIDEO</strong>, l'outil de signalement des incidents de la Direction de l'Administration
               Pénitentiaire : suivi des incidents en milieu ouvert et fermé, historique et harmonisation des pratiques
               professionnelles.
             </p>
             <ul class="tl-bullets">
-              <li>Conception et développement d'applications en Java 21 / Angular 21</li>
-              <li>Mise en place de tests unitaires</li>
-              <li>Développement et implémentation d'API REST</li>
-              <li>Proposition d'améliorations des processus de développement (Clean Architecture, MVVM)</li>
+              <li data-en="Designed and developed applications in Java 21 / Angular 21">Conception et développement d'applications en Java 21 / Angular 21</li>
+              <li data-en="Implemented unit tests">Mise en place de tests unitaires</li>
+              <li data-en="Developed and implemented REST APIs">Développement et implémentation d'API REST</li>
+              <li data-en="Proposed improvements to development processes (Clean Architecture, MVVM)">Proposition d'améliorations des processus de développement (Clean Architecture, MVVM)</li>
             </ul>
             <div class="tag-row">
               <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Angular 21</span>
@@ -236,20 +250,20 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Sénior Développeur Fullstack Java, Angular &amp; DevOps</h3>
+                <h3 data-en="Senior Fullstack Developer — Java, Angular &amp; DevOps">Sénior Développeur Fullstack Java, Angular &amp; DevOps</h3>
                 <p class="tl-company">Ministère de l'Intérieur, Paris</p>
               </div>
-              <span class="tl-date">2025 — 2026 · 1 an</span>
+              <span class="tl-date" data-en="2025 – 2026 · 1 year">2025 — 2026 · 1 an</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="ERPC project — Road Safety Education and Driving Licence Information System: modernizing and unifying driving licence-related services across France.">
               Projet <strong>ERPC</strong> — Système d'Information de l'Éducation Routière et du Permis de Conduire :
               modernisation et unification des services liés au permis de conduire en France.
             </p>
             <ul class="tl-bullets">
-              <li>Conception et développement d'applications en Java 17 / Angular 21</li>
-              <li>Mise en place de tests unitaires et e2e</li>
-              <li>Développement et implémentation d'API REST</li>
-              <li>Maintenance corrective et évolutive</li>
+              <li data-en="Designed and developed applications in Java 17 / Angular 21">Conception et développement d'applications en Java 17 / Angular 21</li>
+              <li data-en="Implemented unit and e2e tests">Mise en place de tests unitaires et e2e</li>
+              <li data-en="Developed and implemented REST APIs">Développement et implémentation d'API REST</li>
+              <li data-en="Corrective and evolutive maintenance">Maintenance corrective et évolutive</li>
             </ul>
             <div class="tag-row">
               <span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">Angular 21</span>
@@ -265,29 +279,29 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Tech Lead Dev Java / Angular</h3>
+                <h3 data-en="Tech Lead Developer — Java / Angular">Tech Lead Dev Java / Angular</h3>
                 <p class="tl-company">Ministère de la Justice, Paris</p>
               </div>
-              <span class="tl-date">2024 — 2025 · 1 an</span>
+              <span class="tl-date" data-en="2024 – 2025 · 1 year">2024 — 2025 · 1 an</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="Ministerial digitalization initiative: implementation of an electronic civil records register accessible to civil-sector users.">
               Dématérialisation ministérielle : mise en place d'un <strong>minutier électronique civil</strong>
               accessible à la sphère civile.
             </p>
             <ul class="tl-bullets tl-bullets-wide">
-              <li>Définir et valider les solutions techniques</li>
-              <li>Concevoir l'architecture du projet</li>
-              <li>Assurer la qualité du code</li>
-              <li>Mettre en place et faire respecter les bonnes pratiques de développement</li>
-              <li>Accompagner et encadrer les développeurs</li>
-              <li>Revue de code</li>
-              <li>Participer au développement Back-end et Front-end</li>
-              <li>Chiffrage et estimation des US</li>
-              <li>Documentation technique</li>
-              <li>Préparation des livrables</li>
-              <li>Mettre en place et maintenir les pipelines CI/CD</li>
-              <li>Superviser les déploiements (Docker, Kubernetes / OpenShift)</li>
-              <li>Assurer la fiabilité des releases (rollback, monitoring)</li>
+              <li data-en="Define and validate technical solutions">Définir et valider les solutions techniques</li>
+              <li data-en="Design the project architecture">Concevoir l'architecture du projet</li>
+              <li data-en="Ensure code quality">Assurer la qualité du code</li>
+              <li data-en="Establish and enforce development best practices">Mettre en place et faire respecter les bonnes pratiques de développement</li>
+              <li data-en="Mentor and supervise developers">Accompagner et encadrer les développeurs</li>
+              <li data-en="Code reviews">Revue de code</li>
+              <li data-en="Contribute to Back-end and Front-end development">Participer au développement Back-end et Front-end</li>
+              <li data-en="Effort estimation and sizing of user stories">Chiffrage et estimation des US</li>
+              <li data-en="Technical documentation">Documentation technique</li>
+              <li data-en="Deliverables preparation">Préparation des livrables</li>
+              <li data-en="Set up and maintain CI/CD pipelines">Mettre en place et maintenir les pipelines CI/CD</li>
+              <li data-en="Oversee deployments (Docker, Kubernetes / OpenShift)">Superviser les déploiements (Docker, Kubernetes / OpenShift)</li>
+              <li data-en="Ensure release reliability (rollback, monitoring)">Assurer la fiabilité des releases (rollback, monitoring)</li>
             </ul>
             <div class="tag-row">
               <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Angular</span>
@@ -303,26 +317,26 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Tech Lead Java / Angular</h3>
+                <h3 data-en="Tech Lead — Java / Angular">Tech Lead Java / Angular</h3>
                 <p class="tl-company">CNAV, Paris</p>
               </div>
-              <span class="tl-date">2021 — 2024 · 3 ans</span>
+              <span class="tl-date" data-en="2021 – 2024 · 3 years">2021 — 2024 · 3 ans</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="DUAPA — an online service for requesting a support plan funded by pension funds (home care assistance) or through the Personalized Autonomy Allowance.">
               <strong>DUAPA</strong> — service en ligne de demande de plan d'aide financé par les caisses de retraite
               (accompagnement à domicile) ou via l'Allocation Personnalisée d'Autonomie.
             </p>
             <ul class="tl-bullets tl-bullets-wide">
-              <li>Maintenance évolutive et corrective</li>
-              <li>Développement front et back</li>
-              <li>Tests unitaires</li>
-              <li>Développement de web services REST</li>
-              <li>Revue de code</li>
-              <li>Support technique pour les développeurs juniors</li>
-              <li>Intégration et déploiement continu</li>
-              <li>Chiffrage et estimation des US</li>
-              <li>Documentation technique</li>
-              <li>Préparation des livrables</li>
+              <li data-en="Evolutive and corrective maintenance">Maintenance évolutive et corrective</li>
+              <li data-en="Front-end and back-end development">Développement front et back</li>
+              <li data-en="Unit tests">Tests unitaires</li>
+              <li data-en="Development of REST web services">Développement de web services REST</li>
+              <li data-en="Code reviews">Revue de code</li>
+              <li data-en="Technical support for junior developers">Support technique pour les développeurs juniors</li>
+              <li data-en="Continuous integration and deployment">Intégration et déploiement continu</li>
+              <li data-en="Effort estimation and sizing of user stories">Chiffrage et estimation des US</li>
+              <li data-en="Technical documentation">Documentation technique</li>
+              <li data-en="Deliverables preparation">Préparation des livrables</li>
             </ul>
             <div class="tag-row">
               <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Angular</span>
@@ -338,19 +352,19 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Développeur Front Angular</h3>
+                <h3 data-en="Angular Front-End Developer">Développeur Front Angular</h3>
                 <p class="tl-company">Ministère de la Santé, Paris</p>
               </div>
-              <span class="tl-date">2020 — 2021 · 1 an</span>
+              <span class="tl-date" data-en="2020 – 2021 · 1 year">2020 — 2021 · 1 an</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="Migration of the Health Monitoring and Safety Information System platform from AngularJS to Angular 10.">
               Migration de la plateforme <strong>Système d'Information Veille et Sécurité Sanitaire</strong>
               d'AngularJS vers Angular 10.
             </p>
             <ul class="tl-bullets">
-              <li>Développement front-end avec Angular</li>
-              <li>Intégration de services REST pour la récupération de données et la communication avec le backend</li>
-              <li>Mise en place de tests unitaires</li>
+              <li data-en="Front-end development with Angular">Développement front-end avec Angular</li>
+              <li data-en="Integrated REST services for data retrieval and backend communication">Intégration de services REST pour la récupération de données et la communication avec le backend</li>
+              <li data-en="Implemented unit tests">Mise en place de tests unitaires</li>
             </ul>
             <div class="tag-row"><span class="tag">AngularJS</span><span class="tag">Angular 10</span><span class="tag">REST</span></div>
           </div>
@@ -361,19 +375,19 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Développeur FullStack Java / Angular</h3>
+                <h3 data-en="Fullstack Developer — Java / Angular">Développeur FullStack Java / Angular</h3>
                 <p class="tl-company">Société Générale, Orléans</p>
               </div>
-              <span class="tl-date">2021 · 6 mois</span>
+              <span class="tl-date" data-en="2021 · 6 months">2021 · 6 mois</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="Sogeretraite — a retirement coaching service for employees to help them prepare for retirement and optimize their voluntary contributions.">
               <strong>Sogeretraite</strong> — service d'accompagnement (coach retraite) dédié aux salariés pour
               préparer leur retraite et optimiser leurs versements volontaires.
             </p>
             <ul class="tl-bullets">
-              <li>Maintenance évolutive et corrective</li>
-              <li>Tests unitaires</li>
-              <li>Développement et implémentation d'endpoints REST</li>
+              <li data-en="Evolutive and corrective maintenance">Maintenance évolutive et corrective</li>
+              <li data-en="Unit tests">Tests unitaires</li>
+              <li data-en="Developed and implemented REST endpoints">Développement et implémentation d'endpoints REST</li>
             </ul>
             <div class="tag-row"><span class="tag">Java</span><span class="tag">Angular</span><span class="tag">REST</span></div>
           </div>
@@ -384,21 +398,21 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Développeur BackEnd Java</h3>
+                <h3 data-en="Backend Java Developer">Développeur BackEnd Java</h3>
                 <p class="tl-company">Malakoff Humanis, Orléans</p>
               </div>
-              <span class="tl-date">2018 — 2020 · 2 ans</span>
+              <span class="tl-date" data-en="2018 – 2020 · 2 years">2018 — 2020 · 2 ans</span>
             </div>
-            <p class="tl-desc">
+            <p class="tl-desc" data-en="BPIJ — a complementary DSN service for reviewing detailed payment records of subrogated daily allowances for employees.">
               <strong>BPIJ</strong> — service complémentaire de la DSN pour consulter le détail des règlements
               d'indemnités journalières subrogées des salariés.
             </p>
             <ul class="tl-bullets">
-              <li>Développement backend avec Java et Spring Batch pour le traitement par lots de données</li>
-              <li>Intégration de web services REST</li>
-              <li>Gestion de bases de données SQL pour stocker les données de traitement</li>
-              <li>Création de nouveaux batchs pour une grande volumétrie afin d'automatiser le traitement</li>
-              <li>Maintenance corrective et évolutive</li>
+              <li data-en="Backend development with Java and Spring Batch for batch data processing">Développement backend avec Java et Spring Batch pour le traitement par lots de données</li>
+              <li data-en="Integrated REST web services">Intégration de web services REST</li>
+              <li data-en="Managed SQL databases to store processing data">Gestion de bases de données SQL pour stocker les données de traitement</li>
+              <li data-en="Built new batch jobs to automate high-volume processing">Création de nouveaux batchs pour une grande volumétrie afin d'automatiser le traitement</li>
+              <li data-en="Corrective and evolutive maintenance">Maintenance corrective et évolutive</li>
             </ul>
             <div class="tag-row"><span class="tag">Java</span><span class="tag">Spring Batch</span><span class="tag">SQL</span><span class="tag">REST</span></div>
           </div>
@@ -411,13 +425,13 @@
   <!-- SKILLS -->
   <section class="section" id="skills">
     <div class="container">
-      <p class="section-kicker reveal">03 — Expertise</p>
-      <h2 class="section-title reveal">Compétences techniques</h2>
+      <p class="section-kicker reveal" data-en="03 — Expertise">03 — Expertise</p>
+      <h2 class="section-title reveal" data-en="Technical Skills">Compétences techniques</h2>
 
       <div class="skills-grid">
         <div class="skill-card reveal">
           <div class="skill-icon-badge badge-blue"><svg class="icon"><use href="#i-code"/></svg></div>
-          <h3>Langages &amp; Frameworks</h3>
+          <h3 data-en="Languages &amp; Frameworks">Langages &amp; Frameworks</h3>
           <div class="tag-row">
             <span class="tag">Java 8 → 21</span><span class="tag">Spring Boot</span><span class="tag">Angular 2 → 21</span>
             <span class="tag">AngularJS</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
@@ -434,7 +448,7 @@
         </div>
         <div class="skill-card reveal">
           <div class="skill-icon-badge badge-green"><svg class="icon"><use href="#i-flask"/></svg></div>
-          <h3>Qualité &amp; Tests</h3>
+          <h3 data-en="Quality &amp; Testing">Qualité &amp; Tests</h3>
           <div class="tag-row">
             <span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">WireMock</span>
             <span class="tag">Cypress</span><span class="tag">TDD</span><span class="tag">SonarQube</span>
@@ -458,10 +472,10 @@
         </div>
         <div class="skill-card reveal">
           <div class="skill-icon-badge badge-pink"><svg class="icon"><use href="#i-users"/></svg></div>
-          <h3>Leadership &amp; Méthodes</h3>
+          <h3 data-en="Leadership &amp; Methods">Leadership &amp; Méthodes</h3>
           <div class="tag-row">
-            <span class="tag">Agile Scrum</span><span class="tag">SAFe</span><span class="tag">Encadrement d'équipe</span>
-            <span class="tag">Revue de code</span><span class="tag">Chiffrage</span>
+            <span class="tag">Agile Scrum</span><span class="tag">SAFe</span><span class="tag" data-en="Team management">Encadrement d'équipe</span>
+            <span class="tag" data-en="Code review">Revue de code</span><span class="tag" data-en="Estimation">Chiffrage</span>
           </div>
         </div>
       </div>
@@ -471,27 +485,27 @@
   <!-- EDUCATION -->
   <section class="section section-alt" id="education">
     <div class="container">
-      <p class="section-kicker reveal">04 — Formation</p>
-      <h2 class="section-title reveal">Diplômes &amp; formations</h2>
+      <p class="section-kicker reveal" data-en="04 — Education">04 — Formation</p>
+      <h2 class="section-title reveal" data-en="Degrees &amp; Education">Diplômes &amp; formations</h2>
 
       <div class="edu-grid">
         <div class="edu-card reveal">
-          <span class="edu-date">2016 — 2018 · 2 ans</span>
+          <span class="edu-date" data-en="2016 – 2018 · 2 years">2016 — 2018 · 2 ans</span>
           <h3>Master IMIS</h3>
-          <p>Informatique Mobile, Intelligence et Sécurité</p>
-          <p class="edu-school">Université d'Orléans</p>
+          <p data-en="Mobile Computing, Intelligence and Security">Informatique Mobile, Intelligence et Sécurité</p>
+          <p class="edu-school" data-en="University of Orléans">Université d'Orléans</p>
         </div>
         <div class="edu-card reveal">
           <span class="edu-date">2014</span>
-          <h3>Licence Professionnelle</h3>
-          <p>Enseignement Informatique</p>
-          <p class="edu-school">Université d'Orléans</p>
+          <h3 data-en="Professional Bachelor's Degree">Licence Professionnelle</h3>
+          <p data-en="Computer Science Education">Enseignement Informatique</p>
+          <p class="edu-school" data-en="University of Orléans">Université d'Orléans</p>
         </div>
         <div class="edu-card reveal">
           <span class="edu-date">2013</span>
-          <h3>Licence Informatique</h3>
-          <p>Informatique et Mathématiques</p>
-          <p class="edu-school">Université d'Orléans</p>
+          <h3 data-en="Bachelor's Degree in Computer Science">Licence Informatique</h3>
+          <p data-en="Computer Science and Mathematics">Informatique et Mathématiques</p>
+          <p class="edu-school" data-en="University of Orléans">Université d'Orléans</p>
         </div>
       </div>
     </div>
@@ -501,8 +515,8 @@
   <section class="section contact" id="contact">
     <div class="container contact-inner">
       <p class="section-kicker reveal">05 — Contact</p>
-      <h2 class="section-title reveal">Construisons quelque chose de robuste</h2>
-      <p class="contact-text reveal">
+      <h2 class="section-title reveal" data-en="Let's build something solid">Construisons quelque chose de robuste</h2>
+      <p class="contact-text reveal" data-en="Open to new opportunities where I can put my technical expertise and leadership skills to good use. Feel free to reach out.">
         Ouvert à de nouvelles opportunités où mettre à profit mon expertise technique et mon sens du leadership.
         N'hésitez pas à me contacter.
       </p>
@@ -514,7 +528,7 @@
         </a>
         <a href="tel:+33669335259" class="contact-card">
           <svg class="icon icon-lg"><use href="#i-phone"/></svg>
-          <span class="contact-label">Téléphone</span>
+          <span class="contact-label" data-en="Phone">Téléphone</span>
           <span class="contact-value">06 69 33 52 59</span>
         </a>
         <a href="https://linkedin.com/in/sami-bouyat" target="_blank" rel="noopener" class="contact-card">
@@ -524,7 +538,7 @@
         </a>
         <span class="contact-card contact-card-static">
           <svg class="icon icon-lg"><use href="#i-pin"/></svg>
-          <span class="contact-label">Localisation</span>
+          <span class="contact-label" data-en="Location">Localisation</span>
           <span class="contact-value">Paris, France</span>
         </span>
       </div>
@@ -536,7 +550,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <span>© <span id="year"></span> Sami Bouyat — Tech Lead Java &amp; Angular</span>
-    <span>Conçu &amp; codé avec soin.</span>
+    <span data-en="Designed &amp; built with care.">Conçu &amp; codé avec soin.</span>
   </div>
 </footer>
 

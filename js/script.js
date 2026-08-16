@@ -36,3 +36,43 @@ const io = new IntersectionObserver(
   { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
 );
 revealEls.forEach((el) => io.observe(el));
+
+// Language switch (FR / EN)
+const translatable = document.querySelectorAll("[data-en]");
+translatable.forEach((el) => { el.dataset.fr = el.innerHTML; });
+
+const langButtons = document.querySelectorAll(".lang-btn");
+const pageMeta = {
+  fr: {
+    title: "Sami Bouyat — Tech Lead Java & Angular",
+    description: "Portfolio de Sami Bouyat, Tech Lead Java & Angular avec 8 ans d'expérience sur des projets pour CNAV, Ministère de la Justice, Ministère de l'Intérieur."
+  },
+  en: {
+    title: "Sami Bouyat — Tech Lead Java & Angular",
+    description: "Portfolio of Sami Bouyat, Tech Lead Java & Angular with 8 years of experience on projects for CNAV, the Ministry of Justice, and the Ministry of the Interior."
+  }
+};
+
+function setLang(lang) {
+  translatable.forEach((el) => {
+    el.innerHTML = lang === "en" ? el.dataset.en : el.dataset.fr;
+  });
+  document.documentElement.lang = lang;
+  document.title = pageMeta[lang].title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute("content", pageMeta[lang].description);
+  langButtons.forEach((btn) => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-pressed", String(active));
+  });
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+
+langButtons.forEach((btn) => {
+  btn.addEventListener("click", () => setLang(btn.dataset.lang));
+});
+
+let savedLang = "fr";
+try { savedLang = localStorage.getItem("lang") || "fr"; } catch (e) {}
+if (savedLang === "en") setLang("en");
