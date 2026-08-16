@@ -53,6 +53,12 @@ const pageMeta = {
   }
 };
 
+const cvLinks = {
+  fr: "assets/cv/Sami_Bouyat_CV_FR.pdf",
+  en: "assets/cv/Sami_Bouyat_CV_EN.pdf"
+};
+const cvDownload = document.getElementById("cvDownload");
+
 function setLang(lang) {
   translatable.forEach((el) => {
     el.innerHTML = lang === "en" ? el.dataset.en : el.dataset.fr;
@@ -61,6 +67,7 @@ function setLang(lang) {
   document.title = pageMeta[lang].title;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", pageMeta[lang].description);
+  if (cvDownload) cvDownload.setAttribute("href", cvLinks[lang]);
   langButtons.forEach((btn) => {
     const active = btn.dataset.lang === lang;
     btn.classList.toggle("active", active);

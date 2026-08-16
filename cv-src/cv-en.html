@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CV — Sami Bouyat</title>
+<style>
+  @page { size: A4; margin: 16mm 18mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1f2937;
+    font-size: 9.6pt;
+    line-height: 1.45;
+  }
+  .header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.5pt solid #0891b2; padding-bottom: 8pt; margin-bottom: 12pt; }
+  .name { font-size: 22pt; font-weight: 700; color: #0f172a; margin: 0; letter-spacing: -0.02em; }
+  .role { font-size: 11pt; font-weight: 600; color: #0891b2; margin: 2pt 0 0; }
+  .contact { text-align: right; font-size: 8.6pt; color: #475569; line-height: 1.7; }
+  .contact a { color: #475569; text-decoration: none; }
+
+  h2.section {
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #0891b2;
+    border-bottom: 0.75pt solid #cbd5e1;
+    padding-bottom: 3pt;
+    margin: 14pt 0 7pt;
+  }
+  h2.section:first-of-type { margin-top: 0; }
+
+  .profile { margin: 0; color: #334155; }
+  .profile strong { color: #0f172a; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 4pt; margin: 0; }
+  .tag {
+    font-size: 7.8pt;
+    color: #0f172a;
+    background: #f1f5f9;
+    border: 0.5pt solid #dbe3ec;
+    border-radius: 8pt;
+    padding: 2.2pt 7pt;
+  }
+  .skill-row { margin-bottom: 6pt; }
+  .skill-row .cat { font-weight: 700; font-size: 8.4pt; color: #0f172a; display: inline; }
+
+  .job { margin-bottom: 9pt; page-break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8pt; }
+  .job-title { font-weight: 700; font-size: 9.8pt; color: #0f172a; }
+  .job-date { font-size: 8pt; color: #64748b; white-space: nowrap; font-weight: 600; }
+  .job-company { font-size: 8.6pt; color: #0891b2; font-weight: 600; margin: 0 0 3pt; }
+  .job ul { margin: 2pt 0 0; padding-left: 11pt; }
+  .job li { margin-bottom: 1.5pt; color: #334155; }
+
+  .edu-grid { display: flex; gap: 12pt; }
+  .edu-item { flex: 1; }
+  .edu-date { font-size: 8pt; color: #0891b2; font-weight: 700; }
+  .edu-title { font-weight: 700; font-size: 9pt; color: #0f172a; margin: 1pt 0; }
+  .edu-sub { font-size: 8.2pt; color: #475569; margin: 0; }
+  .edu-school { font-size: 7.8pt; color: #94a3b8; margin: 1pt 0 0; }
+
+  .lang-row { display: flex; gap: 24pt; }
+  .lang-item { font-size: 8.6pt; color: #334155; }
+  .lang-item b { color: #0f172a; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <p class="name">Sami Bouyat</p>
+      <p class="role">Tech Lead — Java &amp; Angular</p>
+    </div>
+    <div class="contact">
+      sami.bouyat@gmail.com<br>
+      +33 6 69 33 52 59<br>
+      Paris, France · linkedin.com/in/sami-bouyat
+    </div>
+  </div>
+
+  <h2 class="section">Profile</h2>
+  <p class="profile">
+    Tech Lead with <strong>8 years of experience</strong> in <strong>Java / Angular</strong> development, leading strategic
+    projects for major clients such as CNAV (French national pension fund) and the Ministry of Justice. Focused on quality,
+    craftsmanship (Clean Architecture, TDD, SOLID) and Agile methodologies (Scrum, SAFe), with strong technical leadership skills.
+  </p>
+
+  <h2 class="section">Skills</h2>
+  <div class="skill-row"><span class="cat">Languages &amp; Frameworks — </span><span class="tags" style="display:inline">Java 8→21, Spring Boot, Angular 2→21, AngularJS, TypeScript, SQL</span></div>
+  <div class="skill-row"><span class="cat">DevOps &amp; Cloud — </span><span class="tags" style="display:inline">Docker, Podman, Kubernetes, OpenShift, Helm, Jenkins, GitLab CI/CD</span></div>
+  <div class="skill-row"><span class="cat">Quality &amp; Testing — </span><span class="tags" style="display:inline">JUnit, Mockito, WireMock, Cypress, TDD, SonarQube</span></div>
+  <div class="skill-row"><span class="cat">Monitoring — </span><span class="tags" style="display:inline">Grafana, Kibana, Loki, ElasticSearch, PostgreSQL</span></div>
+  <div class="skill-row"><span class="cat">Architecture — </span><span class="tags" style="display:inline">Clean Architecture, Microservices, SOLID, Design Patterns, MVVM</span></div>
+
+  <h2 class="section">Professional Experience</h2>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Senior Fullstack Developer</span><span class="job-date">Jan 2026 – Jul 2026 · 6 months</span></div>
+    <p class="job-company">Ministry of Justice, Paris — INCIDEO project</p>
+    <ul>
+      <li>Designed and developed applications in Java 21 / Angular 21</li>
+      <li>Developed and implemented REST APIs</li>
+      <li>Proposed improvements to development processes (Clean Architecture, MVVM)</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Senior Fullstack Developer — Java, Angular &amp; DevOps</span><span class="job-date">2025 – 2026 · 1 year</span></div>
+    <p class="job-company">Ministry of the Interior, Paris — ERPC project</p>
+    <ul>
+      <li>Designed and developed applications in Java 17 / Angular 21</li>
+      <li>Implemented unit and e2e tests</li>
+      <li>Corrective and evolutive maintenance</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Tech Lead Developer — Java / Angular</span><span class="job-date">2024 – 2025 · 1 year</span></div>
+    <p class="job-company">Ministry of Justice, Paris — Electronic civil records register</p>
+    <ul>
+      <li>Defined and validated technical solutions, designed the project architecture</li>
+      <li>Mentored and supervised developers, conducted code reviews</li>
+      <li>Set up and maintained CI/CD pipelines, oversaw deployments</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Tech Lead — Java / Angular</span><span class="job-date">2021 – 2024 · 3 years</span></div>
+    <p class="job-company">CNAV, Paris — DUAPA project</p>
+    <ul>
+      <li>Evolutive and corrective maintenance, front-end and back-end development</li>
+      <li>Technical support for junior developers, code reviews</li>
+      <li>Continuous integration and deployment</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Angular Front-End Developer</span><span class="job-date">2020 – 2021 · 1 year</span></div>
+    <p class="job-company">Ministry of Health, Paris</p>
+    <ul>
+      <li>Migrated the Health Monitoring and Safety Information System platform from AngularJS to Angular 10</li>
+      <li>Integrated REST services, implemented unit tests</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Fullstack Developer — Java / Angular</span><span class="job-date">2021 · 6 months</span></div>
+    <p class="job-company">Société Générale, Orléans — Sogeretraite</p>
+    <ul>
+      <li>Evolutive and corrective maintenance, unit tests</li>
+      <li>Developed and implemented REST endpoints</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><span class="job-title">Backend Java Developer</span><span class="job-date">2018 – 2020 · 2 years</span></div>
+    <p class="job-company">Malakoff Humanis, Orléans — BPIJ</p>
+    <ul>
+      <li>Backend development with Java and Spring Batch for batch data processing</li>
+      <li>Integrated REST web services, managed SQL databases</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Education</h2>
+  <div class="edu-grid">
+    <div class="edu-item">
+      <p class="edu-date">2016 – 2018</p>
+      <p class="edu-title">Master IMIS</p>
+      <p class="edu-sub">Mobile Computing, Intelligence and Security</p>
+      <p class="edu-school">University of Orléans</p>
+    </div>
+    <div class="edu-item">
+      <p class="edu-date">2014</p>
+      <p class="edu-title">Professional Bachelor's Degree</p>
+      <p class="edu-sub">Computer Science Education</p>
+      <p class="edu-school">University of Orléans</p>
+    </div>
+    <div class="edu-item">
+      <p class="edu-date">2013</p>
+      <p class="edu-title">Bachelor's Degree in Computer Science</p>
+      <p class="edu-sub">Computer Science and Mathematics</p>
+      <p class="edu-school">University of Orléans</p>
+    </div>
+  </div>
+
+  <h2 class="section">Languages</h2>
+  <div class="lang-row">
+    <span class="lang-item"><b>French</b> — Native</span>
+    <span class="lang-item"><b>English</b> — Fluent</span>
+    <span class="lang-item"><b>Spanish</b> — Intermediate</span>
+  </div>
+
+</body>
+</html>
